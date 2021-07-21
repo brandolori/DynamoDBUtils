@@ -19,7 +19,7 @@ const items = JSON.parse(string)
 
 const client = new DocumentClient()
 
-items.forEach((el, index) => {
+items.forEach(async (el, index) => {
     await client.put({
         TableName: tableName,
         Item: el
